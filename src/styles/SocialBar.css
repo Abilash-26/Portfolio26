@@ -1,0 +1,50 @@
+.left-social-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 17px;
+  width: auto;
+  height: 100vh; 
+  background-color: transparent;
+  z-index: 10;
+  padding-top: 75px;
+}
+
+/* Vertical Line */
+.left-social-bar .line {
+  width: 2px;
+  height: 150px; /* ← this controls vertical length */
+  background-color: #ABB2BF;
+  transform: none; 
+  margin-bottom: 10px;
+}
+
+/* Icons below the line */
+.left-social-bar .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon style */
+.left-social-bar .icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.left-social-bar .icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4);
+}
+
+
+@media (max-width: 768px) {
+    .left-social-bar {
+        display: none;
+    }
+}

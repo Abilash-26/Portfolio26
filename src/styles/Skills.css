@@ -1,0 +1,136 @@
+.skills {
+  position: relative;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #FFFFFF;
+  font-family: 'Fira Code', monospace;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Heading */
+.skills h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #C778DD;
+  margin-bottom: 32px;
+  position: relative;
+  padding-left: 16px;
+  border-left: 3px solid #C778DD;
+  text-align: left;
+}
+
+/* Grid layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Skill Box */
+.skill-box {
+  border: 1px solid #ABB2BF;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: transparent;
+  min-height: 120px;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-4px);
+}
+
+/* Titles */
+.skill-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* Content */
+.skill-box p {
+  font-size: 16px;
+  color: #ABB2BF;
+  line-height: 21px;
+  margin: 0;
+}
+
+/* Medium Screens */
+@media (max-width: 768px) {
+  .skills {
+    padding: 40px 16px;
+  }
+
+  .skills h2 {
+    font-size: 20px;
+  }
+
+  .skill-box {
+    padding: 12px;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill-box h3,
+  .skill-box p {
+    font-size: 14px;
+  }
+
+  .skills h2 {
+    font-size: 18px;
+    border-left: 2px solid #C778DD;
+    padding-left: 10px;
+  }
+}
+
+
+.projects-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.projects-header .title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.projects-header .hash {
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #C778DD;
+}
+
+.projects-header h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.projects-header .line {
+  flex-grow: 1;
+  height: 1px;
+  background: #C778DD;
+}

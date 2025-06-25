@@ -1,0 +1,172 @@
+/* Overall Section */
+.projects-section {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header Section */
+.projects-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+}
+
+.projects-header .title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.projects-header .hash {
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #C778DD;
+}
+
+.projects-header h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.projects-header .line {
+  flex-grow: 1;
+  height: 1px;
+  background: #C778DD;
+}
+
+.projects-header .view-all {
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Project Card - smaller width */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 270px; /* ⬅️ Reduced from 330px */
+  border: 1px solid #ABB2BF;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Banner Image */
+.project-banner {
+  width: 100%;
+  height: 160px; /* ⬅️ Reduced height */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ABB2BF;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+}
+
+.tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #ABB2BF;
+}
+
+/* Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-top: 1px solid #ABB2BF;
+}
+
+.project-content h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.project-content p {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #ABB2BF;
+  margin: 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  
+}
+
+.btn {
+  padding: 6px 12px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  cursor: pointer;
+}
+
+.btn.live {
+  border: 1px solid #C778DD;
+  color: #FFFFFF;
+}
+
+.btn.demo {
+  border: 1px solid #ABB2BF;
+  color: #ABB2BF;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-header .line {
+    display: none;
+  }
+
+  .projects-header .view-all {
+    margin-left: 0;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .projects-grid {
+    justify-content: center;
+  }
+}

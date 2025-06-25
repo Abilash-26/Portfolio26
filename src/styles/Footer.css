@@ -1,0 +1,165 @@
+.footer {
+  width: 100%;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  font-family: 'Fira Code', monospace;
+  background-color: transparent;
+  position: relative;
+
+}
+
+.footer-line {
+  width: 100%;
+  border-top: 1px solid #ABB2BF;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1025px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #ABB2BF;
+  flex: 1;
+  min-width: 250px;
+  margin-left: 10px;
+}
+
+.footer-left .logo-section {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-left .logo-section img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1) brightness(2) contrast(2);
+}
+
+.footer-left .logo-section span {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.footer-left .email {
+  color: #ABB2BF;
+  font-size: 16px;
+}
+
+.footer-left .desc {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  color: #FFFFFF;
+  flex: 1;
+  min-width: 250px;
+ 
+}
+
+.footer-right .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31px;
+}
+
+.footer-right .icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-right .icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
+.footer-right .icons img:hover {
+  filter: brightness(1);
+}
+
+.footer-bottom {
+  color: #ABB2BF;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ===================== */
+/* 📱 Responsive Queries */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 32px;
+    padding: 0 16px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .footer-left,
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-right .title {
+    font-size: 20px;
+  }
+
+  .footer-right .icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-bottom: 24px;
+    top: auto;
+  }
+
+  .footer-right .title {
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+
+  .footer-left .desc,
+  .footer-left .email {
+    font-size: 14px;
+  }
+}

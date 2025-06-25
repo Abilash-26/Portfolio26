@@ -1,0 +1,160 @@
+.contact-section {
+  position: relative;
+  padding: 100px 170px;
+  font-family: 'Fira Code', monospace;
+  color: #ABB2BF;
+  
+  box-sizing: border-box;
+}
+
+/* Header */
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.contact-header .hash {
+  color: #C778DD;
+  margin-right: 8px;
+}
+
+.contact-header .line {
+  height: 1px;
+  width: 127px;
+  background-color: #C778DD;
+}
+
+/* Message */
+.contact-message {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  max-width: 505px;
+  margin-bottom: 40px;
+}
+
+/* Contact Info Box */
+.contact-box {
+  position: absolute;
+  top: 180px;
+  right: 20px;
+  width: 304px;
+  height: 119px;
+  border: 1px solid #ABB2BF;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: transparent;
+}
+
+/* Box Title */
+.contact-box-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* Links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ABB2BF;
+  flex-wrap: wrap;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+.contact-link span {
+  max-width: 240px; 
+  gap: 8px;
+  text-decoration: dotted;
+}
+
+
+.contact-link img {
+  width: 22px;
+  height: 22px;
+   filter: brightness(0) invert(1);
+}
+
+
+/*  Responsive Queries */
+
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 60px 60px;
+    top: auto;
+  }
+
+  .contact-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contact-message {
+    max-width: 100%;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-header h2 {
+    font-size: 24px;
+  }
+
+  .contact-message {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .contact-box {
+    padding: 12px;
+    gap: 12px;
+  }
+
+ .contact-link {
+    font-size: 14px;
+  }
+
+  .contact-link span {
+    max-width: 100%;
+  }
+
+  .contact-link img {
+    width: 20px;
+    height: 20px;
+     filter: brightness(0) invert(1);
+  }
+}
