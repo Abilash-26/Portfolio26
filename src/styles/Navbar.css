@@ -2,9 +2,10 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 0; /* updated for full-width */
-  width: 100%; /* updated for responsive width */
-  height: 13%;
+  left: 0; 
+  width: 100%; 
+  height: auto;
+  min-height: 60px;
   z-index: 1;
   background-color: #1f1f1f;
   display: flex;
@@ -14,7 +15,6 @@
   border-bottom: 1px solid #333;
   box-sizing: border-box;
   cursor: pointer;
-
 }
 
 /* Logo */
@@ -37,6 +37,7 @@
   color: #fff;
   font-weight: 500;
   transition: color 0.2s;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -64,6 +65,18 @@
 
 .hash:hover {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 0.9rem;
+  }
 }
 
 /* Responsive Design */
