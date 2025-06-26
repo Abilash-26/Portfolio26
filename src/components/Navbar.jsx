@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import "../styles/Navbar.css";
-import logo from "../assets/logo.png";
+
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
