@@ -3,14 +3,13 @@ import "../styles/Skills.css";
 
 const Skills = () => (
   <section className="skills" id="skills">
-       <div className="projects-header">
-        <div className="title">
-         
-          <h2>Skills</h2>
-        </div>
-        <div className="line" />
-       
+
+
+     <div className="skills-header">
+        <h2><span className="hash">/</span>Skills</h2>
+        <div className="line"></div>
       </div>
+     
     <div className="skills-grid">
       <div className="skill-box"><h3>Languages</h3><p>JavaScript, Python, Html5, Css3, SQL</p></div>
       <div className="skill-box"><h3>Frameworks</h3><p>React, React Router, Axios,  Flask, Node.js, Express.js, </p></div>

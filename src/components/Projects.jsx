@@ -1,5 +1,7 @@
-import React from "react";
-import "../styles/Projects.css"; 
+import { Link } from "react-router-dom";
+
+import "../styles/Projects.css";
+
 import drowsinessImage from "../assets/drowsiness.png";
 import sliderImage from "../assets/slider.png";
 import obj from "../assets/object.png";
@@ -9,7 +11,7 @@ const projects = [
     id: 1,
     title: "Drowsiness Detection",
     description: "AI-powered app that monitors driver alertness using webcam and triggers alarms.",
-    tags: ['Python','React', 'Flask', 'MySQL'],
+    tags: ['Python', 'React', 'Flask', 'MySQL'],
     image: drowsinessImage,
     live: true,
     github: 'https://github.com/Abilash-26/Drowsiness-Detection.git',
@@ -35,15 +37,20 @@ const projects = [
 ];
 
 const Projects = () => {
+
+  
+  
   return (
     <section className="projects-section" id="projects">
       <div className="projects-header">
-        <div className="title">
-          <span className="hash">#</span>
+        <div className="title-line">
+          <span className="hash">/</span>
           <h2>projects</h2>
+          <div className="line" />
+          <Link to="/projects">
+            <span className="view-all">View all ~~&gt;</span>
+          </Link>
         </div>
-        <div className="line" />
-        <span className="view-all">View all ~~&gt;</span>
       </div>
 
       <div className="projects-grid">

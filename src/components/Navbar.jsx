@@ -1,33 +1,86 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
-import logo from "../assets/logo.png";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
 
     return (
         <header className="navbar">
-             <ScrollLink
-                to="home"
-                smooth={true}
-                duration={500}
-                offset={-30}
-                onClick={() => setMenuOpen(false)}
-                className="nav-logo"
-            >
-                {/* If you want to show the image: */}
-                
-            </ScrollLink>
-            <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-                <ScrollLink to="home" smooth={true} duration={500} onClick={() => setMenuOpen(false)} offset={-30}><span className="hash">#</span>Home</ScrollLink>
-                <ScrollLink to="projects" smooth={true} duration={500} onClick={() => setMenuOpen(false)} offset={-50}><span className="hash">#</span>projects</ScrollLink>
-                <ScrollLink to="skills" smooth={true} duration={500} onClick={() => setMenuOpen(false)} offset={-50}><span className="hash">#</span>skills</ScrollLink>
-                <ScrollLink to="aboutme" smooth={true} duration={500} onClick={() => setMenuOpen(false)} offset={-30}><span className="hash">#</span>about me</ScrollLink>
-              
-                <ScrollLink to="contact" smooth={true} duration={500} onClick={() => setMenuOpen(false)} offset={-50}><span className="hash">#</span>contact</ScrollLink>
-            </nav>
 
+            <div className="nav-logo">
+                <ScrollLink to="home" smooth={true} duration={500}>
+                   
+                </ScrollLink>
+            </div>
+
+
+
+            <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+                {/* Home */}
+                {location.pathname === "/" ? (
+                    <ScrollLink
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        offset={-30}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        <span className="hash">/</span>Home
+                    </ScrollLink>
+                ) : (
+                    <Link to="/" onClick={() => setMenuOpen(false)}>
+                        <span className="hash">/</span>Home
+                    </Link>
+                )}
+
+                {/* Projects → Always goes to /projects */}
+                <Link to="/projects" onClick={() => setMenuOpen(false)}>
+                    <span className="hash">/</span>Projects
+                </Link>
+
+                {/* Skills */}
+                {location.pathname === "/" && (
+                    <ScrollLink
+                        to="skills"
+                        smooth={true}
+                        duration={500}
+                        offset={-50}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        <span className="hash">/</span>Skills
+                    </ScrollLink>
+                )}
+
+                {/* About Me */}
+                {location.pathname === "/" && (
+                    <ScrollLink
+                        to="aboutme"
+                        smooth={true}
+                        duration={500}
+                        offset={-30}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        <span className="hash">/</span>About Me
+                    </ScrollLink>
+                )}
+
+                {/* Contact */}
+                {location.pathname === "/" && (
+                    <ScrollLink
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        offset={-50}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        <span className="hash">/</span>Contact
+                    </ScrollLink>
+                )}
+            </nav>
 
             <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                 <span></span>

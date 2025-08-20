@@ -1,26 +1,25 @@
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0; /* updated for full-width */
-  width: 100%; /* updated for responsive width */
-  height: 13%;
+  top: 0; 
+  width: 90%; 
+  height: 60px;
+  min-height: 0px;
   z-index: 1;
   background-color: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #333;
   box-sizing: border-box;
   cursor: pointer;
-
 }
 
 /* Logo */
 .nav-logo {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
   background: url('../assets/logo.png') no-repeat center/contain;
   filter: invert(1) brightness(2) contrast(2);
 }
@@ -37,6 +36,7 @@
   color: #fff;
   font-weight: 500;
   transition: color 0.2s;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -64,6 +64,18 @@
 
 .hash:hover {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 0.9rem;
+  }
 }
 
 /* Responsive Design */

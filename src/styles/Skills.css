@@ -11,15 +11,30 @@
 }
 
 /* Heading */
-.skills h2 {
-  font-size: 24px;
-  font-weight: 600;
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.skills-header .hash {
   color: #C778DD;
-  margin-bottom: 32px;
-  position: relative;
-  padding-left: 16px;
-  border-left: 3px solid #C778DD;
-  text-align: left;
+  margin-right: 8px;
+}
+
+.skills-header .line {
+  height: 1px;
+  flex: 1;
+  background-color: #C778DD;
 }
 
 /* Grid layout */

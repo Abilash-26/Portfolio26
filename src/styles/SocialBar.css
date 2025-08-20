@@ -9,13 +9,13 @@
   height: 100vh; 
   background-color: transparent;
   z-index: 10;
-  padding-top: 75px;
+  padding-top: 1px;
 }
 
 /* Vertical Line */
 .left-social-bar .line {
   width: 2px;
-  height: 150px; /* ← this controls vertical length */
+  height: 200px; /* ← this controls vertical length */
   background-color: #ABB2BF;
   transform: none; 
   margin-bottom: 10px;

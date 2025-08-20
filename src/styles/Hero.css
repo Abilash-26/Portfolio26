@@ -1,21 +1,36 @@
 /* Hero Container */
 .hero {
-   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 20px 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 40px; /* spacing between text and image */
+  padding: 120px 20px 60px;
 }
 
 /* Main Text Container */
 .hero .main-text {
-  max-width: 540px;
   flex: 1;
-  margin-left: 90px;
+  max-width: 540px;
+}
+
+.hero .image-frame {
+  flex: 1;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.hero .status {
   margin-top: 20px;
+  background: #282C33;
+  border: 1px solid #ABB2BF;
+  padding: 10px 16px;
+   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Title */

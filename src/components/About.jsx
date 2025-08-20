@@ -7,7 +7,7 @@ const AboutMe = () => {
     <section className="about-section" id="aboutme">
         
       <div className="about-header">
-        <h2><span className="hash">#</span>about-me</h2>
+        <h2><span className="hash">/</span>about-me</h2>
         <div className="line"></div>
       </div>
 
